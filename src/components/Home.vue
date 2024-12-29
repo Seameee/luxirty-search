@@ -99,9 +99,6 @@ footer a {
 
 /* 深色模式适配 */
 @media (prefers-color-scheme: dark) {
-  footer {
-    background-color: #1a1a1a; /* 深色背景 */
-  }
   
   footer a {
     color: #ffffff; /* 明亮的链接颜色 */
