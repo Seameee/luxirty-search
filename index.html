@@ -16,7 +16,7 @@
         .then(response => response.text())
         .then(url => {
           const background = document.querySelector('.background');
-          background.style.backgroundImage = `url(${url.startsWith('/thumbnails/') ? 'http://api.seaya.link' + url : url})`;
+          background.style.backgroundImage = `url(${url.startsWith('/') ? 'https://api.seaya.link' + url : url})`;
           background.style.opacity = '1';
         });
     </script>
