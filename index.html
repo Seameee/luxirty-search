@@ -5,7 +5,7 @@
     <link rel="icon" href="/favicon.ico">
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Luxirty Search">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxirty Search</title>
+    <title>Seamee Search</title>
     <script async data-cfasync="false" src="https://cse.google.com/cse.js?cx=%VITE_GOOGLE_CSE_CX%"></script>
   </head>
   <body>
@@ -15,10 +15,14 @@
       fetch('https://api.seaya.link/background_image.txt')
         .then(response => response.text())
         .then(url => {
+          console.log('Original URL:', url);
+          const fullUrl = url.startsWith('/') ? 'https://api.seaya.link' + url : url;
+          console.log('Full URL:', fullUrl);
           const background = document.querySelector('.background');
-          background.style.backgroundImage = `url(${url.startsWith('/') ? 'https://api.seaya.link' + url : url})`;
+          background.style.backgroundImage = `url(${fullUrl})`;
           background.style.opacity = '1';
-        });
+        })
+        .catch(error => console.error('Error fetching background:', error));
     </script>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
