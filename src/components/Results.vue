@@ -74,12 +74,11 @@ export default {
 .my-container {
   display: flex;
   flex-direction: column;
-  /* 让子元素垂直排列 */
   min-height: 100vh;
-  /* 让容器占满整个视窗高度 */
   max-width: var(--center-width);
   min-width: 320px;
   box-sizing: border-box;
+  overflow: auto;
 }
 
 .search-container {
