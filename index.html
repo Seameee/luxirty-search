@@ -16,12 +16,16 @@
         .then(response => response.text())
         .then(url => {
           console.log('Original URL:', url);
-          const fullUrl = url.startsWith('/') ? 'https://api.seaya.link' + url : url;
-          const encodedUrl = encodeURIComponent(fullUrl);
-          console.log('Full URL:', fullUrl);
+          const encodedUrl = url
+            .replace(/ /g, '%20')
+            .replace(/\(/g, '%28')
+            .replace(/\)/g, '%29');
+          const fullUrl = `https://api.seaya.link${encodedUrl}`;
+          console.log('Original URL:', url);
           console.log('Encoded URL:', encodedUrl);
+          console.log('Full URL:', fullUrl);
           const background = document.querySelector('.background');
-          background.style.backgroundImage = `url(${encodedUrl})`;
+          background.style.backgroundImage = `url(${fullUrl})`;
           background.style.opacity = '1';
         })
         .catch(error => console.error('Error fetching background:', error));
