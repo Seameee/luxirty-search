@@ -4,7 +4,7 @@
       <a href="https://luxirty.com/posts/luxirty-search/" target="_blank">关于</a>
     </div>
     <div class="logo">
-      Luxirty Search
+      Seamee Search
     </div>
     <div class="search-container">
       <div class="gcse-searchbox-only" data-resultsUrl="search"></div>
