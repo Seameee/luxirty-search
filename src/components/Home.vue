@@ -97,14 +97,6 @@ footer a {
   transition: color 0.3s ease, text-shadow 0.3s ease; /* 添加文本阴影过渡 */
 }
 
-/* 深色模式适配 */
-@media (prefers-color-scheme: dark) {
-  
-  footer a {
-    color: #ffffff; /* 明亮的链接颜色 */
-  }
-}
-
 /* 鼠标悬停效果 */
 footer a:hover {
   color: #0056b3; /* 鼠标悬停时的深蓝色 */
